@@ -26,3 +26,30 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 
 ```
+
+## Primer approach: Fuerza bruta
+
+Recordemos que la **fuerza bruta** consiste en probar todas las soluciones posibles hasta que se encuentre la correcta. Siemple pero ineficiente.
+```javascript
+var twoSum = function(nums, target) {
+    for(i=0; i < nums.length; i++) {
+        const a = nums[i]
+        for(j=i+1; j < nums.length; j++){
+            const b = nums[j]
+            if (a + b === target) { return [i, j] }
+        }
+    }
+}
+```
+
+### Diagrama de flujo: Enfoque de Fuerza Bruta
+
+...
+
+### Análisis del enfoque inicial:
+
+- **Complejidad temporal**: O(n²), donde n es el tamaño del array.
+- **Complejidad espacial**: O(1), ya que no utilizamos estructuras de datos adicionales.
+- **Lógica**: Para cada elemento del array, comparamos con todos los elementos siguientes.
+- **Ventajas**: Simple de implementar y comprender.
+- **Desventajas**: Ineficiente para arrays grandes.
